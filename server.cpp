@@ -37,24 +37,6 @@ void main() {
 		ZeroMemory(clientip, 256);
 		inet_ntop(AF_INET, &client.sin_addr, clientip, 256);
 		cout << "Message Receive From Client: " << clientip << "\n -" << buf << endl;
-		/*client.sin_family = AF_INET;
-		client.sin_port = htons(54000);*/
-		//inet_pton(AF_INET, "127.0.1.1", &serverHint.sin_addr);
-		///*SOCKET out = socket(AF_INET, SOCK_DGRAM, 0);
-		//char user;
-		//string s;
-		//do {
-		//	cout << "Reply to Message: ";
-		//	getline(cin, s);
-		//	int sendok = sendto(out, s.c_str(), s.size() + 1, 0, (sockaddr*)&serverHint, sizeof(serverHint));
-		//	if (sendok == SOCKET_ERROR) {
-		//		cout << "Unable to Reach the Client! " << WSAGetLastError() << endl;
-		//	}
-		//	cout << "Try Another Message? [y/n]: ";
-		//	cin >> user;
-		//	getline(cin, s);*/
-		//} while (user == 'y' || user == 'Y');
-		//closesocket(out);
 	}
 	closesocket(in);
 	WSACleanup();
